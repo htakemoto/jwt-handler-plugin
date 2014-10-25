@@ -58,7 +58,7 @@ public class JwtBuilder
 		final Verifier hmacVerifier = new HmacSHA256Verifier(SYMMETRIC_KEY);
 		VerifierProvider hmacLocator = new VerifierProvider() {
 	        @Override
-	        public List<Verifier> findVerifier(String signerId, String keyId) {
+			public List<Verifier> findVerifier(String signerId, String keyId) {
 	          return Lists.newArrayList(hmacVerifier);
 	        }
 	    };
